@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Minimal -->
+   <link rel='icon' type='image/png' href='images/icons/favicon@32.png'>
+   <link rel='icon' sizes='192x192' href='images/icons/icon@192.png'>
+   <link rel='apple-touch-icon' href='images/icons/icon@152.png'>
+   <meta name='msapplication-square310x310logo' content='images/icons/icon@310.png'>
+
+   <!-- Apple -->
+   <link rel='apple-touch-icon' href='images/icons/touch-icon-iphone.png'>
+   <link rel='apple-touch-icon' sizes='76x76' href='images/icons/touch-icon-ipad.png'>
+   <link rel='apple-touch-icon' sizes='120x120' href='images/icons/touch-icon-iphone-retina.png'>
+   <link rel='apple-touch-icon' sizes='152x152' href='images/icons/touch-icon-ipad-retina.png'>
+
+   <!-- Microsoft -->
+   <meta name='msapplication-square70x70logo' content='images/icons/icon_smalltile.png'>
+   <meta name='msapplication-square150x150logo' content='images/icons/icon_mediumtile.png'>
+   <meta name='msapplication-wide310x150logo' content='images/icons/icon_widetile.png'>
+
+   <!-- Icons related -->
+   <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+   <link rel="apple-touch-startup-image" href="images/icon.png">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="images/icon.png">
+
+
+   <script type="text/javascript" src="js/typed.js"></script>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover, shrink-to-fit=no">
+   <meta name="csrf-token" content="a4QATffJXIDuqlhRTGZhSivFM8orSvpo2qTMZdPo">
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="application-name" content="Antonio Cranga">
+   <meta name="apple-mobile-web-app-title" content="Antonio Cranga">
+   <meta name="theme-color" content="#F73646">
+   <meta name="msapplication-navbutton-color" content="#F73646">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+   <meta name="msapplication-starturl" content="/">
+   <title>Antonio Cranga | Mobile development for your product.</title>
+   <meta name="description" content="Real world branding and development for you mobile appearance in the market.">
+   <link rel="canonical" href="#"> <!-- need to be changed -->
+
+   <!-- OG -->
+   <meta property="og:title" content="Antonio Cranga | Mobile development for your product.">
+   <meta property="og:description"
+      content="Real world branding and development for you mobile appearance in the market.">
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="UIGlobal">
+   <meta property="og:image" content="images/logo.png">
+
+   <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="device" id="pc"></div>
+   <div class="qc-cursor -visible -media-lg -media-blend -pointer -media">
+      <div class="qc-cursor-revert">
+         <div class="qc-cursor-text">view case</div>
+         <div class="qc-cursor-menu">
+            <div class="qc-cursor-media-box" style="background: #000"></div>
+         </div>
+         <div class="qc-cursor-media-2 d-clown" style="display: none;">
+            <div class="qc-cursor-media-box">
+               <img src="images/clown.webp" style="width: 350px;">
+            </div>
+         </div>
+         <div class="qc-cursor-media-2 d-design" style="display: none;">
+            <div class="qc-cursor-media-box">
+               <img src="images/design.webp" style="width: 470px;">
+            </div>
+         </div>
+         <div class="qc-cursor-media-2 d-business" style="display: none;">
+            <div class="qc-cursor-media-box">
+               <img src="images/business.webp" style="width: 350px;">
+            </div>
+         </div>
+         <div class="qc-cursor-media meqe" style="display: none;">
+            <div class="qc-cursor-media-box no-filter">
+               <video id="video-cursor" muted loop autoplay src></video>
+            </div>
+         </div>
+      </div>
+   </div>
+   <a href="#contacts" class="chats">
+      <img src="images/chat.svg" class="r-bubble">
+   </a>
+   <div id="container">
+      <section class="home child sectionn max-height">
+         <div class="logo">
+            <a href data-section="0" class="magnetize">
+               <img src="images/logo.svg" style="width: 6rem; mix-blend-mode: difference;">
+            </a>
+         </div>
+         <!-- <div class="say-hello">
+            <a href="./#contacts" class="magnetize" data-dist="5" data-cursor-type="medium" data-cursor-text="" id="say_hello">
+               <svg width="12px" height="61px" viewBox="0 0 12 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                     <g transform="translate(-61.000000, -881.000000)" fill="#000000" fill-rule="nonzero" class="fill">
+                        <path d="M43.772,917 L43.772,915.08 L39.02,915.08 L39.02,905.8 L36.94,905.8 L36.94,917 L43.772,917 Z M48.4582222,917.128 C50.4102222,917.128 51.4982222,916.2 52.1222222,914.776 L50.5222222,914.184 C50.0422222,915.016 49.4822222,915.432 48.5702222,915.432 C47.3382222,915.432 46.7142222,914.504 46.6662222,913.608 L52.2182222,913.608 L52.2182222,912.792 C52.2182222,911.032 51.1462222,908.808 48.4582222,908.808 C45.6902222,908.808 44.5862222,911.064 44.5862222,912.968 C44.5862222,914.872 45.6902222,917.128 48.4582222,917.128 Z M50.1862222,912.04 L46.7142222,912.04 C46.8582222,911.272 47.4502222,910.504 48.4582222,910.504 C49.5142222,910.504 50.0102222,911.24 50.1862222,912.04 Z M57.3364444,917.128 C57.7684444,917.128 58.2004444,917.048 58.6484444,916.84 L58.1844444,915.24 C57.9124444,915.384 57.6884444,915.432 57.4164444,915.432 C56.7444444,915.432 56.3604444,915.112 56.3604444,914.12 L56.3604444,910.632 L58.4884444,910.632 L58.4884444,908.936 L56.3604444,908.936 L56.3604444,905.672 L54.3764444,906.92 L54.3764444,908.936 L53.1284444,908.936 L53.1284444,910.632 L54.3764444,910.632 L54.3764444,914.152 C54.3764444,916.152 55.5124444,917.128 57.3364444,917.128 Z M62.7106666,917.128 C64.4546666,917.128 65.5746666,915.896 65.5746666,914.44 C65.5746666,913.032 64.3742935,912.537558 63.3324751,912.186327 L62.9185674,912.048678 C62.830085,912.018996 62.7444444,911.98963 62.6626666,911.96 C62.1826666,911.784 61.8946666,911.528 61.8946666,911.176 C61.8946666,910.728 62.2466666,910.504 62.6306666,910.504 C63.0786666,910.504 63.6066666,910.728 63.9746666,911.208 L65.1586666,910.12 C64.6626666,909.336 63.7186666,908.808 62.6306666,908.808 C61.0626666,908.808 60.0546666,909.912 60.0546666,911.16 C60.0546666,912.408 60.8066666,912.968 61.6866666,913.336 C62.6626666,913.752 63.7026666,913.896 63.7026666,914.568 C63.7026666,915.16 63.3186666,915.432 62.7106666,915.432 C61.9266666,915.432 61.3826666,914.888 61.0946666,914.104 L59.5106666,914.952 C59.9106666,915.944 61.0306666,917.128 62.7106666,917.128 Z M74.339111,917.128 C74.771111,917.128 75.203111,917.048 75.651111,916.84 L75.187111,915.24 C74.915111,915.384 74.691111,915.432 74.419111,915.432 C73.747111,915.432 73.363111,915.112 73.363111,914.12 L73.363111,910.632 L75.491111,910.632 L75.491111,908.936 L73.363111,908.936 L73.363111,905.672 L71.379111,906.92 L71.379111,908.936 L70.131111,908.936 L70.131111,910.632 L71.379111,910.632 L71.379111,914.152 C71.379111,916.152 72.515111,917.128 74.339111,917.128 Z M79.0893332,917.128 C80.2413332,917.128 81.0093332,916.664 81.5693332,915.976 L81.7773332,917 L83.4093332,917 L83.4093332,912.184 C83.4093332,909.608 81.9373332,908.808 80.0173332,908.808 C78.3693332,908.808 77.2013332,909.72 76.9453332,911.048 L78.6253332,911.432 C78.8813332,910.68 79.4573332,910.504 80.0173332,910.504 C80.7533332,910.504 81.4253332,910.792 81.4253332,911.688 L81.4253332,912.04 L80.0813332,912.04 C78.0493332,912.04 76.6413332,913.08 76.6413332,914.68 C76.6413332,916.28 77.7133332,917.128 79.0893332,917.128 Z M79.5533332,915.432 C78.9933332,915.432 78.7213332,915.032 78.7213332,914.648 C78.7213332,913.928 79.2493332,913.608 80.0973332,913.608 L81.4253332,913.608 L81.4253332,913.768 C81.4253332,914.808 80.4653332,915.432 79.5533332,915.432 Z M87.1835554,917 L87.1835554,905.672 L85.1995554,905.672 L85.1995554,917 L87.1835554,917 Z M91.2457776,917 L91.2457776,913.192 L94.0937776,917 L96.5257776,917 L93.0857776,912.648 L96.3177776,908.936 L93.8697776,908.936 L91.2457776,912.104 L91.2457776,905.672 L89.2617776,905.672 L89.2617776,917 L91.2457776,917 Z" transform="translate(66.732889, 911.400000) rotate(-90.000000) translate(-66.732889, -911.400000) " class="fill"></path>
+                     </g>
+                  </g>
+               </svg>
+               <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                     <g transform="translate(-48.000000, -960.000000)" fill="#000000" class="fill">
+                        <path d="M68,960 C79.045695,960 88,968.954305 88,980 C88,991.045695 79.045695,1000 68,1000 C56.954305,1000 48,991.045695 48,980 C48,968.954305 56.954305,960 68,960 Z M74,975 L62,975 L62,983 L66,983 L70,986 L70,983 L74,983 L74,975 Z"></path>
+                     </g>
+                  </g>
+               </svg>
+            </a>
+         </div> -->
+         <div class="toggle magnetize only-desktop" data-dist="5" data-cursor-type="medium" data-cursor-text>
+            <div>
+               <div></div>
+               <div></div>
+            </div>
+         </div>
+         <div class="toggle-mobile toggle magnetize only-mobile" data-dist="5" data-cursor-type="medium"
+            data-cursor-text="">
+            <div>
+               <div></div>
+               <div></div>
+            </div>
+         </div>
+         <div class="nav">
+            <div class="nav__bg"></div>
+            <div class="nav__container">
+               <div class="nav__showreel">
+                  <div class="buttons">
+                     <div class="button">
+                        <a href="#about" class="open-showreel" data-cursor-type="medium">
+                           <div class="text">Scroll</div>
+                           <div class="line"></div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="app">
+            <div class="app-container" data-namespace="home">
+               <div class="content-wrapper home">
+
+                  <div class="main">
+                     <div class="home-slide home-slide--intro is-active" data-cursor-type="big"
+                        data-cursor-text="scroll"
+                        style="background-color: #ffffff;background-image: radial-gradient(#00000029 0.8px, #ffffff 0.8px);background-size: 26px 26px;">
+                        <div class="logo--mobile logo--mobile--white">
+                           <a href="./" data-section="0">
+                              <img src="./images/logo.svg" style="width: 6rem;">
+                           </a>
+                        </div>
+                        <div class="container-fluid desktop">
+                           <div class="row no-gutters justify-content-center align-items-center">
+                              <div class="col-sm-10" style="text-align: left;">
+                                 <h2 class="txt--p2">Real world branding and development.</h2>
+                                 <h1 class="title--title2" style="line-height: 6rem; font-size: 6rem;">
+                                    <!--- <div class="fixed-line">We <span
+                                          class="clown underlined underlined-angular">create</span> <span
+                                          class="design underlined underlined-dashed">mobile appearance</span></div>
+                                    <div class="lines">
+                                       <div class="word word1">for <span
+                                             class="business underlined underlined-waved">your product</span>.</div>
+                                    </div> -->
+                                    <div class="fixed-line">
+                                       We
+                                       <div id="typed-strings">
+                                          <span>create</span>
+                                          <span>develop</span>
+                                          <span>design</span>
+                                          <span>enhance</span>
+                                          <span>build</span>
+                                       </div>
+                                       <span id="typed"></span>
+                                    </div>
+                                    <div class="lines">
+                                       <div class="word word1">your <span
+                                             class="clown underlined underlined-angular">mobile appearance</span>.</div>
+                                    </div>
+                                 </h1>
+                                 <div class="buttons">
+                                    <div class="button button--3">
+                                       <a href="#whatwedo" data-cursor-type="medium" data-cursor-text
+                                          class="open-showreel">What we do</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="container-fluid mobile">
+                           <div class="row no-gutters justify-content-center align-items-center">
+                              <!--  <video loop="" autoplay="true" preload="auto" muted="muted" playsinline="" style="pointer-events:none; width: 100%; border-radius: 1rem;">
+                                 <source src="./uploads/video-m.mp4" type="video/mp4">
+                              </video> -->
+                              <img src="./images/video-m.gif"
+                                 style="pointer-events:none; width: 85%; border-radius: 1rem;">
+                              <div class="col-xs-12 col-sm-12 px-3" style="text-align: center;">
+                                 <h2 class="txt--p2">Real world branding and development.</h2>
+                                 <h1 class="rawtypingtext">
+                                    <div>We <div id="rawtyping"></div>
+                                 </div>
+                                 mobile applications
+                                 </h1>
+
+                              </div>
+                              <div class="buttons mt-0">
+                                 <div class="button button--3">
+                                    <a href="#whatwedo" data-cursor-type="medium" data-cursor-text
+                                       class="open-showreel">What we do</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="breadcrumb">
+                           <a href="#" class="explore magnetize" data-dist="5" data-cursor-type="medium"
+                              data-cursor-text>
+                              <svg width="12px" height="109px" viewBox="0 0 12 109" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1612.000000, -877.000000)">
+                                       <rect fill="#FFFFFF" x="1612" y="877" width="12" height="108" />
+                                       <path
+                                          d="M1605.02,896.204 L1603.34,897.276 C1602.908,896.444 1602.444,896.092 1601.788,896.092 C1601.18,896.092 1600.716,896.524 1600.716,897.116 C1600.716,899.068 1605.5,898.812 1605.5,902.14 C1605.5,904.332 1604.06,905.628 1601.916,905.628 C1599.884,905.628 1598.412,904.204 1598.06,902.492 L1599.74,901.436 C1600.076,902.636 1600.748,903.708 1601.964,903.708 C1602.828,903.708 1603.42,903.276 1603.42,902.252 C1603.42,900.396 1598.732,900.764 1598.732,897.212 C1598.732,895.516 1600.028,894.172 1601.788,894.172 C1603.276,894.172 1604.412,894.908 1605.02,896.204 Z M1612.65022,902.604 L1614.42622,903.324 C1613.81822,904.844 1612.55422,905.628 1610.76222,905.628 C1608.13822,905.628 1606.82622,903.74 1606.82622,901.468 C1606.82622,899.196 1608.13822,897.308 1610.76222,897.308 C1612.55422,897.308 1613.81822,898.092 1614.42622,899.612 L1612.65022,900.332 C1612.23422,899.484 1611.65822,899.004 1610.76222,899.004 C1609.51422,899.004 1608.90622,900.044 1608.90622,901.468 C1608.90622,902.892 1609.51422,903.932 1610.76222,903.932 C1611.65822,903.932 1612.23422,903.452 1612.65022,902.604 Z M1617.83244,905.5 L1615.84844,905.5 L1615.84844,897.436 L1617.83244,897.436 L1617.83244,898.748 C1618.40844,897.804 1619.30444,897.308 1620.21644,897.308 C1620.56844,897.308 1620.87244,897.372 1621.19244,897.468 L1620.82444,899.308 C1620.58444,899.164 1620.32844,899.084 1619.99244,899.084 C1618.84044,899.084 1617.83244,900.028 1617.83244,902.636 L1617.83244,905.5 Z M1621.86267,901.468 C1621.86267,899.132 1623.36667,897.308 1625.95867,897.308 C1628.55067,897.308 1630.05467,899.132 1630.05467,901.468 C1630.05467,903.804 1628.55067,905.628 1625.95867,905.628 C1623.36667,905.628 1621.86267,903.804 1621.86267,901.468 Z M1623.94267,901.468 C1623.94267,902.796 1624.67867,903.932 1625.95867,903.932 C1627.23867,903.932 1627.97467,902.796 1627.97467,901.468 C1627.97467,900.14 1627.23867,899.004 1625.95867,899.004 C1624.67867,899.004 1623.94267,900.14 1623.94267,901.468 Z M1631.74889,894.172 L1633.73289,894.172 L1633.73289,905.5 L1631.74889,905.5 L1631.74889,894.172 Z M1635.49111,894.172 L1637.47511,894.172 L1637.47511,905.5 L1635.49111,905.5 L1635.49111,894.172 Z"
+                                          class="fill" fill="#000000" fill-rule="nonzero"
+                                          transform="translate(1617.767556, 899.900000) rotate(-90.000000) translate(-1617.767556, -899.900000) " />
+                                       <polygon class="fill" fill="#000000" fill-rule="nonzero"
+                                          transform="translate(1618.589844, 963.500000) rotate(-90.000000) translate(-1618.589844, -963.500000) "
+                                          points="1639.17969 963 1639.17969 964 1598 964 1598 963" />
+                                       <path
+                                          d="M1619.00797,984.300866 L1618.29605,984.305744 L1618.64954,983.942433 L1619.00797,984.300866 Z M1620.8787,981.651325 L1621.59543,982.348675 L1618.6593,985.366405 L1615.64645,982.353553 L1616.35355,981.646447 L1618.64954,983.942433 L1620.8787,981.651325 Z"
+                                          class="fill" fill="#000000" fill-rule="nonzero" />
+                                    </g>
+                                 </g>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="home child sectionn" style="background: #090909" id="whatwedo">
+         <div class="container-fluid desktop fix--top fix--bottom" style="padding-right: 0; padding-left: 0;">
+            <div class="row no-gutters justify-content-center align-items-center">
+               <div class="col-sm-10">
+                  <h1 class="title--title2" style="text-align: center; color: #fff">
+                     <div class="fixed-line">What we do
+                     </div>
+                  </h1>
+
+               </div>
+            </div>
+            <div class="marquee my-6 mt-md-7">
+               <div class="marquee__inner-2" aria-hidden="true">
+                  <span class="design-h" data-video="./images/video/slideshow.mp4">Mobile desing</span>
+                  <span class="outl design-h" data-video="./images/video/Instagram_video.mp4">Social Media</span>
+                  <span class="design-h" data-video="./images/video/ui.mp4">MVPs</span>
+                  <span class="outl design-h" data-video="./images/video/mobile.mp4">Mobile Applications</span>
+                  <span class="design-h" data-video="./images/video/web.mp4">Testing</span>
+                  <span class="outl design-h" data-video="./images/video/slideshow.mp4">Mobile desing</span>
+                  <span class="design-h design-h" data-video="./images/video/mobile2.mp4">User Experience</span>
+                  <span class="outl design-h" data-video="./images/video/ecommerce.mp4">E-commerce</span>
+               </div>
+               <div class="marquee__inner m-mt" aria-hidden="true">
+                  <span class="outl design-h" data-video="./images/video/usert.mp4">Design Systems</span>
+                  <span class="design-h" data-video="./images/video/web3.mp4">Web Apps</span>
+                  <span class="outl design-h" data-video="./images/video/usert.mp4">Branding</span>
+                  <span class="design-h" data-video="./images/video/Instagram_video.mp4">Social Media</span>
+                  <span class="outl design-h" data-video="./images/video/web2.mp4">Strategy</span>
+                  <span class="design-h" data-video="./images/video/cloud.mp4">Cloud databases</span>
+                  <span class="outl design-h" data-video="./images/video/ui.mp4">Prototyping</span>
+                  <span class="design-h" data-video="./images/video/mobile.mp4">Mobile App</span>
+               </div>
+               <div class="marquee__inner-2 m-mt" aria-hidden="true">
+                  <span class="design-h" data-video="./images/video/web.mp4">Web Design</span>
+                  <span class="outl design-h" data-video="./images/video/web2.mp4">Strategy</span>
+                  <span class="design-h" data-video="./images/video/mobile2.mp4">User Experience</span>
+                  <span class="outl design-h" data-video="./images/video/mobile.mp4">Showcasing</span>
+                  <span class="design-h" data-video="./images/video/slideshow.mp4">Mobile design</span>
+                  <span class="outl design-h" data-video="./images/video/usert.mp4">User Testing</span>
+                  <span class="design-h" data-video="./images/video/ui.mp4">Prototyping</span>
+                  <span class="outl design-h" data-video="./images/video/mobile.mp4">Mobile Applications</span>
+               </div>
+               <div class="mt-6 only-mobile" style="z-index: 3">
+                  <div class="row marq-row" style="margin: 0;">
+                     <div class="col-12">
+                        <!--  <video style="pointer-events:none; width: 100%;border-radius: 1.3rem;" preload="auto" loop="" autoplay="true" muted="muted" playsinline="">
+                           <source src="./uploads/video-a.mp4" type="video/mp4">
+                        </video> -->
+                        <video src="uploads/youdesignhor.mp4"
+                           style="pointer-events:none; width: 100%; border-radius: 1.3rem;" autoplay="true" loop
+                           preload="auto" muted>
+                     </div>
+                     <div class="m-mt-ask col-6" style="padding-right: .3rem;">
+                        <!-- <video style="pointer-events:none; width: 100%;border-radius: 1.3rem;" preload="auto" loop="" autoplay="true" muted="muted" playsinline="">
+                           <source src="./uploads/02-code.mp4" type="video/mp4">
+                        </video> -->
+                        <video src="uploads/1080x1080newcompressed.mp4"
+                           style="pointer-events:none; width: 100%; border-radius: 1.3rem;" autoplay="true" loop
+                           preload="auto" muted>
+                     </div>
+                     <div class="m-mt-ask col-6" style="padding-left: .3rem;"><img src="./images/courses.jpg"
+                           style="width: 100%;border-radius: 1.3rem;"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="home child sectionn max-height" style="background: #fff;position: relative;z-index: 5" id="about">
+         <div class="container desktop fix--top" style="padding-bottom: 5rem;">
+            <div class="row no-gutters justify-content-center align-items-top">
+               <div class="col-12 col-md-5" style="text-align: left;">
+                  <h1 class="title--title2" style="color: #000;">
+                     <div class="fixed-line">Turn your thoughts into real world mobile applications</div>
+                  </h1>
+                  <br>
+                  <p class="title-pp">
+                     We are a full-service digital agency that builds top notch solution using state-of-the-art
+                     softwares. Our team creates an
+                     exceptional UI/UX design and thought-out functionality for you and your product. Our mission is to
+                     enhance your mobile appearance and branding into the market.
+                  </p>
+                  <div class="buttons">
+                     <div class="button button--3">
+                        <a href="#contacts" data-cursor-type="medium" data-cursor-text
+                           class="mt-5 open-showreel">Contact us</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="only-mobile">
+                  <div class="row mt-4 ml-1">
+                     <div class="col-6 relative">
+                        <img src="images/brands/brand-1.png" style="width: 80%" id="brand1"
+                           srcset="images/brands/brand-1.png" class="slide-out-top">
+                        <img class="absolute slide-in-top" style="opacity:0;top:0;left:0;width: 80%"
+                           src="images/brands/brand-6.png" id="brand5" srcset="images/brands/brand-6.png">
+                     </div>
+                     <div class="col-6 relative">
+                        <img src="images/brands/brand-3.png" style="width: 80%" id="brand2"
+                           srcset="images/brands/brand-3.png" class="slide-out-top">
+                        <img class="absolute slide-in-top" style="opacity:0;top:0;left:0;width: 80%"
+                           src="images/brands/brand-5.png" id="brand6" srcset="images/brands/brand-5.png">
+                     </div>
+                     <div class="col-6 relative">
+                        <img src="images/brands/brand-2.png" style="width: 80%" id="brand3"
+                           srcset="images/brands/brand-2.png" class="slide-out-top">
+                        <img class="absolute slide-in-top" style="opacity:0;top:0;left:0;width: 80%"
+                           src="images/brands/brand-4.png" id="brand7" srcset="images/brands/brand-4.png">
+                     </div>
+                     <div class="col-6 relative">
+                        <img src="images/brands/brand-7.png" style="width: 80%" id="brand4"
+                           srcset="images/brands/brand-7.png" class="slide-out-top">
+                        <img class="absolute slide-in-top" style="opacity:0;top:0;left:0;width: 80%"
+                           src="images/brands/brand-8.png" id="brand8" srcset="images/brands/brand-8.png">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-1 only-desktop"></div>
+               <div class="col-6 only-desktop">
+                  <div class="row">
+                     <div class="col-12"><video src="uploads/youdesignhor.mp4"
+                           style="width: 80%;box-shadow: 20px 20px 60px 0px #d9d9d9a6, -20px -20px 20px #ffffff;border-radius: 1.3rem;"
+                           muted loop autoplay></video></div>
+                     <div class="mt-3 col-5"><video src="uploads/1080x1080newcompressed.mp4"
+                           style="width: 95%;box-shadow: 20px 20px 60px 0px #d9d9d9a6, -20px -20px 20px #ffffff;border-radius: 1.3rem;"
+                           muted loop autoplay></video></div>
+                     <div class="mt-3 col-5"><img src="images/courses.jpg"
+                           style="width: 95%;box-shadow: 20px 20px 60px 0px #d9d9d9a6, -20px -20px 20px #ffffff;border-radius: 1.3rem;">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="home child sectionn" style="background: #090909;" id="about">
+         <div class="container desktop fix--top" style="padding-bottom: 10rem;">
+            <div class="row no-gutters justify-content-center align-items-center">
+               <div class="col-12 col-md-8">
+                  <h1 class="title--title2" style="text-align: center; color: #fff">
+                     <div class="fixed-line">We build modern experiences</div>
+                  </h1>
+                  <p class="mt-5" style="text-align: center; color: #fff; font-size: 1.2rem; line-height: 1.8rem;">UI
+                     Global can help visualize even the craziest ideas converting them into elegant designs, awesome
+                     experiences and catchy brands.</p>
+               </div>
+               <div class="buttons mt-5 only-mobile">
+                  <div class="button-light button--3">
+                     <a href="#contacts" data-cursor-type="medium" data-cursor-text class="open-showreel">Contact us</a>
+                  </div>
+               </div>
+            </div>
+            <div style="perspective: 600px; z-index: 5;">
+               <video loop autoplay="true" muted="muted" preload="auto" playsinline
+                  style="pointer-events:none; margin-top: 3rem;width: 100%;border-radius: 1.3rem;transform: rotateX(33deg);">
+                  <source src="images/panel2.mp4" type="video/mp4">
+               </video>
+            </div>
+         </div>
+      </section>
+      <section class="home child sectionn max-height" id="contacts"
+         style="background: #fff; z-index: 6; position: relative; min-height: max-content; max-height: max-content;">
+         <div class="container desktop fix--bottom fix--top">
+            <div class="row no-gutters justify-content-center align-items-top">
+               <div class="col-12 col-sm-4 only-desktop" style="text-align: left;">
+                  <h3 style="color: #000; font-size: 1rem; letter-spacing: 5px;">CONTACT
+                     <div class="qc-outro-mail mt-3">
+                        <a href="mailto:office.uiglobal@gmail.com">
+                           <em><span>office.uiglobal@gmail.com</span></em>
+                        </a>
+                     </div>
+                     <br><br><br><br>
+                     <h3 style="color: #000; font-size: 1rem; letter-spacing: 5px;">FOLLOW
+                        <div class="mt-3">
+                           <a href="https://www.instagram.com/ui.global/"><img class="qc-social"
+                                 src="images/instagram.svg"></a>
+                           <a href="https://www.tiktok.com/@ui.global"><img class="qc-social"
+                                 src="images/tiktok.svg"></a>
+                           <a href="https://dribbble.com/uiglobal"><img class="qc-social" src="images/dribbble.svg"></a>
+                        </div>
+                     </h3>
+                  </h3>
+               </div>
+               <div class="col-12 col-sm-8" style="text-align: left;">
+                  <h3 style="color: #000; font-size: 1rem; letter-spacing: 5px;">HIRE US
+                     <h1 style="color: #000; font-size: 4rem; font-weight: 800">
+                        <div class="fixed-line mt-2">Let’s talk!</div>
+                     </h1>
+                     <form class="mt-5" id="email-form" method="POST" action="addfile/sendsorder.php" name="email-form"
+                        data-name="Email Form">
+                        <div class="holder-field">
+                           <input type="text" class="text-field text-field1 w-input" maxlength="256" name="Name"
+                              data-name="Name" placeholder="Andrew from IBM" id="Name" required>
+                           <label for="Name-3" class="field-label field-label1">Name &amp; Company</label>
+                        </div>
+                        <div class="holder-field">
+                           <input type="email" class="text-field text-field2 w-input" maxlength="256" name="Email"
+                              data-name="Email" placeholder="andrew@ibm.com" id="Email" required>
+                           <label for="Email-3" class="field-label field-label2">Email</label>
+                        </div>
+                        <label for="email-3 mt-3" data-w-id="f6a059a0-9306-630f-fc7c-73e7142b12a4"
+                           class="field-label field-label3">Project Budget</label>
+                        <div class="radio-holder mt-2">
+                           <label class="radio-btn radio-new w-radio">
+                              <input type="radio" data-name="Budget" id="$5k - $20K" name="Budget" value="$5k - $20K"
+                                 class="w-form-formradioinput w-radio-input">
+                              <span for="$5k - $20K" data-w-id="54155009-b1d0-27c4-da0c-840a09c23a41"
+                                 class="btn12 w-form-label">$5k - $20K</span>
+                           </label>
+                           <label class="radio-btn radio-new w-radio">
+                              <input type="radio" data-name="Budget" id="$20k - $50K" name="Budget" value="$20k - $50K"
+                                 class="w-form-formradioinput w-radio-input">
+                              <span for="$20k - $50K" data-w-id="fef13629-f18e-3fac-d4bd-5eebbf3f8925"
+                                 class="btn12 w-form-label">$20k - $50K</span>
+                           </label>
+                           <label class="radio-btn radio-new w-radio">
+                              <input type="radio" data-name="Budget" id="$50k - $100K" name="Budget"
+                                 value="$50k - $100K" class="w-form-formradioinput w-radio-input">
+                              <span for="$50k - $100K" data-w-id="29a99284-e2af-c89d-7859-62f3b251ccf1"
+                                 class="btn12 w-form-label">$50k - $100K</span>
+                           </label>
+                           <label class="radio-btn radio-new radion-new-last w-radio">
+                              <input type="radio" data-name="Budget" id="$100K+" name="Budget" value="$100K+"
+                                 class="w-form-formradioinput w-radio-input">
+                              <span for="$100K+" data-w-id="e261ec52-ad48-e305-9aa9-6bd61a379ac6"
+                                 class="btn12 w-form-label">$100K+</span>
+                           </label>
+                        </div>
+                        <div class="holder-field mt-5">
+                           <textarea placeholder="Ex. We would like to build this platform..." maxlength="5000"
+                              id="Message" name="Message" data-name="Message" required
+                              class="textarea w-input"></textarea>
+                           <label for="email-2" class="field-label field-label4">Project Description</label>
+                        </div>
+                        <div class="relative-holder-sb">
+                           <div class="buttons">
+                              <div class="button button--3">
+                                 <button type="submit" data-cursor-type="medium" data-cursor-text
+                                    class="open-showreel">Send</button>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </h3>
+               </div>
+            </div>
+         </div>
+      </section>
+   </div>
+
+
+   <nav class="qc-menu -open">
+      <div class="qc-menu-box" style="display: none;">
+         <div class="qc-menu-backdrop" style="opacity: 1; will-change: auto;"></div>
+         <div class="qc-menu-content" id="qc-menus" style="background-color: rgb(255, 255, 255); will-change: auto;">
+            <div class="qc-menu-body" style="opacity: 1; transform: translate(0%, 0px); will-change: auto;">
+               <div class="qc-menu-container">
+                  <div class="qc-menu-grid">
+                     <div class="qc-menu-grid-col -left">
+                        <div class="qc-menu-title">Social</div>
+                        <div class="qc-menu-social" data-cursor="-opaque">
+                           <a class="qc-menu-social-item" href="https://www.instagram.com/ui.global/" target="_blank"
+                              rel="noopener">
+                              <em>
+                                 <span data-text="Instagram">Instagram</span>
+                              </em>
+                           </a>
+                           <a class="qc-menu-social-item" href="https://dribbble.com/uiglobal" target="_blank"
+                              rel="noopener">
+                              <em>
+                                 <span data-text="Dribbble">Dribbble</span>
+                              </em>
+                           </a>
+                           <a class="qc-menu-social-item" href="http://tiktok.com/@ui.global" target="_blank"
+                              rel="noopener">
+                              <em>
+                                 <span data-text="TikTok">TikTok</span>
+                              </em>
+                           </a>
+
+                        </div>
+                     </div>
+                     <div class="qc-menu-grid-col -right menu-rights" id="menu-rights">
+                        <div class="qc-menu-title">Menu</div>
+                        <div class="qc-menu-nav" role="navigation" data-cursor="-opaque">
+                           <div class="qc-menu-nav-item"><a href="#whatwedo" data-magnetic
+                                 style="transform: translate3d(0px, 0px, 0px);"><em><span data-text="What We Do">What We
+                                       Do</span></em></a></div>
+                           <div class="qc-menu-nav-item"><a href="#about" data-magnetic
+                                 style="transform: translate3d(0px, 0px, 0px);"><em><span
+                                       data-text="About">About</span></em></a></div>
+                           <div class="qc-menu-nav-item -marked -active"><a href="#contacts" data-magnetic
+                                 style="transform: translate3d(0px, 0px, 0px);"><em><span
+                                       data-text="Contacts">Contacts</span></em></a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="qc-menu-footer menu-rights" id="menu-rights" style="opacity: 1; will-change: auto;">
+               <div class="row">
+                  <div class="qc-menu-container ml-4 mr-2 col-5">
+                     <div class="qc-menu-title">Get in touch</div>
+                     <div class="qc-menu-mail"><a
+                           href="mailto:office.uiglobal@gmail.com"><span>office.uiglobal@gmail.com</span></a></div>
+                  </div>
+                  <div class="qc-menu-container col-5 only-mobile">
+                     <div class="qc-menu-title">Social</div>
+                     <div class="qc-menu-mail-2" style="margin-top: .7rem;">
+                        <a href="http://tiktok.com/@ui.global"><img class="qc-social-m" src="images/tiktok.svg"></a>
+                        <a href="https://www.instagram.com/ui.global/" class="ml-3"><img class="qc-social-m"
+                              src="images/instagram.svg"></a>
+                        <a href="https://dribbble.com/uiglobal" class="ml-3"><img class="qc-social-m"
+                              src="images/dribbble.svg"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </nav>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/magnet-mouse.min.js"></script>
+   <script type="text/javascript" src="js/app2.js"></script>
+   <script type="text/javascript">
+      var position = $(window).scrollTop();
+      var status = 0;
+      $(window).scroll(function () {
+         var scroll = $(window).scrollTop();
+         if (scroll > position) {
+            if (status != 1) {
+               status = 1;
+               if ($('.logo--mobile').length !== 0) {
+                  $('.logo--mobile').hide();
+                  $('.toggle-mobile').hide();
+               }
+            }
+         } else {
+            if (status == 1) {
+               status = 0;
+               if ($('.logo--mobile').length !== 0) {
+                  $('.logo--mobile').show();
+                  $('.toggle-mobile').show();
+               }
+            }
+         }
+         position = scroll;
+      });
+   </script>
+   <script>
+      $('document').ready(function () {
+         var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 90,
+            backSpeed: 90,
+            loop: true
+         });
+      });
+   </script>
+   <!--Raw typing effects-->
+   <script type="text/javascript">
+
+      // List of sentences
+      var _CONTENT = ['create', 'develop', 'design', 'build'];
+
+      var _PART = 0;
+
+      // Character number of the current sentence being processed 
+      var _PART_INDEX = 0;
+
+      // Holds the handle returned from setInterval
+      var _INTERVAL_VAL;
+
+      // Element that holds the text
+      var _ELEMENT = document.querySelector("#rawtyping");
+
+      // Cursor element 
+
+      // Implements typing effect
+      function Type() {
+         // Get substring with 1 characater added
+         var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+         _ELEMENT.innerHTML = text;
+         _PART_INDEX++;
+
+         // If full sentence has been displayed then start to delete the sentence after some time
+         if (text === _CONTENT[_PART]) {
+            // Hide the cursor
+
+            clearInterval(_INTERVAL_VAL);
+            setTimeout(function () {
+               _INTERVAL_VAL = setInterval(Delete, 200);
+            }, 1000);
+         }
+      }
+
+      // Implements deleting effect
+      function Delete() {
+         // Get substring with 1 characater deleted
+         var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+         _ELEMENT.innerHTML = text;
+         _PART_INDEX--;
+
+         // If sentence has been deleted then start to display the next sentence
+         if (text === '') {
+            clearInterval(_INTERVAL_VAL);
+
+            // If current sentence was last then display the first one, else move to the next
+            if (_PART == (_CONTENT.length - 1))
+               _PART = 0;
+            else
+               _PART++;
+
+            _PART_INDEX = 0;
+
+            // Start to display the next sentence after some time
+            setTimeout(function () {
+               _INTERVAL_VAL = setInterval(Type, 200);
+            }, 200);
+         }
+      }
+
+      // Start the typing effect on load
+      _INTERVAL_VAL = setInterval(Type, 100);
+   </script>
+
+</body>
+
+</html>
