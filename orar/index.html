@@ -55,7 +55,9 @@
       <div class="4">
         <div class="accent-cyan-gradient"></div>
       </div>
-      <div class="5"><div class="grafuri">Algoritmica grafurilor - Curs</div></div>
+      <div class="5">
+        <div class="grafuri">Algoritmica grafurilor - Curs</div>
+      </div>
       <div class="1"></div>
       <div class="2"></div>
       <div class="3"></div>
@@ -70,12 +72,16 @@
       <div class="3">
         <div class="grafuri">Algoritmica grafurilor - Seminar</div>
       </div>
-      <div class="4"><div class="quantum">Quantum Computing - Curs</div></div>
+      <div class="4">
+        <div class="quantum">Quantum Computing - Curs</div>
+      </div>
       <div class="5"></div>
       <div class="1"></div>
       <div class="2"></div>
       <div class="3"></div>
-      <div class="4"><div class="quantum">Quantum Computing - Seminar</div></div>
+      <div class="4">
+        <div class="quantum">Quantum Computing - Seminar</div>
+      </div>
       <div class="5"></div>
       <div class="1">
         <div class="lfac">Limbaje formale, automate si compilatoare - Seminar</div>
@@ -92,41 +98,37 @@
     var hour = getHour();
     console.log(today);
     var targets = document.getElementsByClassName(today.toString())
-    var index =0 ;
-    if(hour >= 8 && hour <= 10)
-      {
-        index = 0;
-      }
-      else if(hour > 10 && hour <= 12)
-      {
-        index = 1;
-      }
-      else if(hour > 12 && hour <= 14)
-      {
-        index =2;
-      }
-      else if(hour > 14 && hour <= 16)
-      {
-        index = 3;
-      }
-      else if(hour > 16 && hour <= 18)
-      {
-        index = 4;
-      }
-      else if(hour > 18 && hour <= 20)
-      {
-        index = 5;
-      }
-    
+    var index = -1;
+    if (hour >= 8 && hour <= 10) {
+      index = 0;
+    }
+    else if (hour > 10 && hour <= 12) {
+      index = 1;
+    }
+    else if (hour > 12 && hour <= 14) {
+      index = 2;
+    }
+    else if (hour > 14 && hour <= 16) {
+      index = 3;
+    }
+    else if (hour > 16 && hour <= 18) {
+      index = 4;
+    }
+    else if (hour > 18 && hour <= 20) {
+      index = 5;
+    }
+
     for (var i = 0; i < targets.length; i++) {
       var target = targets[i];
       target.style.borderLeft = "3px solid #4EA1EE";
       target.style.borderRight = "3px solid #4EA1EE";
     }
-    targets[index].style.borderRight = "thick solid #FF6B6B";
-    targets[index].style.borderLeft = "thick solid #FF6B6B";
-    targets[index].style.borderTop = "thick solid #FF6B6B";
-    targets[index].style.borderBottom = "thick solid #FF6B6B";
+    if (index != -1) {
+      targets[index].style.borderRight = "thick solid #FF6B6B";
+      targets[index].style.borderLeft = "thick solid #FF6B6B";
+      targets[index].style.borderTop = "thick solid #FF6B6B";
+      targets[index].style.borderBottom = "thick solid #FF6B6B";
+    }
   </script>
 </body>
 
