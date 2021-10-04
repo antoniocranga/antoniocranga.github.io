@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title>Orar</title>
+
+  <meta name="robots" content="noindex">
+  <base href="/orar/">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="canonical" href="https://antoniocranga.me/orar">
+  <link rel="icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="text/javascript" src="/func.js">
+  </script>
+</head>
+
+<body>
+  <div class="timetable">
+    <div class="week-names">
+      <div class="1">Luni</div>
+      <div class="2">Marti</div>
+      <div class="3">Miercuri</div>
+      <div class="4">Joi</div>
+      <div class="5">Vineri</div>
+    </div>
+    <div class="time-interval">
+      <div>8:00 - 10:00</div>
+      <div>10:00 - 12:00</div>
+      <div>12:00 - 14:00</div>
+      <div>14:00 - 16:00</div>
+      <div>16:00 - 18:00</div>
+      <div>18:00 - 20:00</div>
+    </div>
+    <div class="content">
+      <div class="1">
+        <div class="bazededate">Baze de date - Curs</div>
+      </div>
+      <div class="2">
+        <div class="engleza">Limba engleză</div>
+      </div>
+      <div class="3"></div>
+      <div class="4"></div>
+      <div class="5">
+        <div class="bazededate">Baze de date - Seminar</div>
+      </div>
+      <div class="1">
+        <div class="lfac">Limbaje formale, automate si compilatoare - Curs</div>
+      </div>
+      <div class="2"></div>
+      <div class="3"></div>
+      <div class="4">
+        <div class="accent-cyan-gradient"></div>
+      </div>
+      <div class="5"><div class="grafuri">Algoritmica grafurilor - Curs</div></div>
+      <div class="1"></div>
+      <div class="2"></div>
+      <div class="3"></div>
+      <div class="4"></div>
+      <div class="5"></div>
+      <div class="1">
+        <div class="retele">Retele de calculatoare - Curs</div>
+      </div>
+      <div class="2">
+        <div class="retele">Retele de calculatoare - Seminar</div>
+      </div>
+      <div class="3">
+        <div class="grafuri">Algoritmica grafurilor - Seminar</div>
+      </div>
+      <div class="4"><div class="quantum">Quantum Computing - Curs</div></div>
+      <div class="5"></div>
+      <div class="1"></div>
+      <div class="2"></div>
+      <div class="3"></div>
+      <div class="4"><div class="quantum">Quantum Computing - Seminar</div></div>
+      <div class="5"></div>
+      <div class="1">
+        <div class="lfac">Limbaje formale, automate si compilatoare - Seminar</div>
+      </div>
+      <div class="2"></div>
+      <div class="3"></div>
+      <div class="4"></div>
+      <div class="5"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    var today = getToday();
+    var hour = getHour();
+    console.log(today);
+    var targets = document.getElementsByClassName(today.toString())
+    var index =0 ;
+    if(hour >= 8 && hour <= 10)
+      {
+        index = 0;
+      }
+      else if(hour > 10 && hour <= 12)
+      {
+        index = 1;
+      }
+      else if(hour > 12 && hour <= 14)
+      {
+        index =2;
+      }
+      else if(hour > 14 && hour <= 16)
+      {
+        index = 3;
+      }
+      else if(hour > 16 && hour <= 18)
+      {
+        index = 4;
+      }
+      else if(hour > 18 && hour <= 20)
+      {
+        index = 5;
+      }
+    
+    for (var i = 0; i < targets.length; i++) {
+      var target = targets[i];
+      target.style.borderLeft = "3px solid #4EA1EE";
+      target.style.borderRight = "3px solid #4EA1EE";
+    }
+    targets[index].style.borderRight = "thick solid #FF6B6B";
+    targets[index].style.borderLeft = "thick solid #FF6B6B";
+    targets[index].style.borderTop = "thick solid #FF6B6B";
+    targets[index].style.borderBottom = "thick solid #FF6B6B";
+  </script>
+</body>
+
+</html>
